@@ -1,0 +1,118 @@
+body {
+  background-color: #FFD7FC;
+  color: #B81323;
+  font-family: 'Mallanna', sans-serif;
+  margin: 25px;
+}
+
+.subtitle{
+font-family: 'Mallanna', sans-serif;
+font-size: 15px;
+}
+
+.priceText{
+  font-size: 1.5em;
+}
+
+.navMain {
+  display: grid;
+  grid-template-areas: "title prices rules";
+  text-align: center;
+}
+
+#prices {
+  grid-area: prices;
+}
+
+#rules {
+  grid-area: rules;
+}
+
+.navItem {
+  grid-area: menu;
+  font-size: 2.0em;
+  font-family:'Indie Flower', cursive;
+  align-self: center;
+}
+
+.navTitle {
+  grid-area: title;
+  font-family:'Indie Flower', cursive;
+  font-size: 2.5em;
+}
+
+
+.navItem> a:link {
+  color: #804e89;
+  text-decoration: none;
+}
+
+.navItem> a:visited {
+  color: #c026dc;
+  text-decoration: none;
+}
+
+.containerPrices {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "imgCol" "mainText";
+  margin: 0.5em 0.5em;
+  align-items: center;
+}
+
+.containerRules {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 2%;
+  grid-template-areas: "mainText" "imgCol";
+  margin: 0.5em 0.5em;
+}
+
+.mainText{
+  background: #FFF;
+  border-radius: 25px;
+  padding: 0 15px;
+}
+
+.imgCol{
+  align-self: self-start;
+}
+
+.imgCol > img {
+  width: 75%;
+}
+
+@media screen and (max-width: 480px) {
+  .navMain {
+    grid-template-areas:
+    'title title'
+    'prices rules';
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    -webkit-margin-before: 0.25em;
+    -webkit-margin-after: .1em;
+  }
+
+  .priceText {
+    font-size: 1.1em;
+  }
+
+  .imgCol > img {
+    width: 95%;
+  }
+
+  .containerPrices {
+    grid-template-columns: 40% 60%;
+    margin: 0.5em -0.5em;
+    font-size: 14px;
+  }
+
+  .containerRules {
+    grid-template-columns: 65% 35%;
+    margin: 0.5em -0.5em;
+    font-size: 14px;
+  }
+}
